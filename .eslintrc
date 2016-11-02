@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "env": {
+        "node":true,
+        "browser": true,
+        "es6": true,
+    },
+    parser: "babel-eslint",
+    plugins: ["react"],
+    extends: ["rackt", "plugin:react/recommended"],
+    rules: {
+        "strict": [2, "safe"],
+        "linebreak-style": 0,
+        "no-console": 0,
+        "no-mixed-spaces-and-tabs": [0],
+        "react/jsx-no-undef": 2,
+        "no-unknown-property":0
+    }
+}
