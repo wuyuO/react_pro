@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from '../../../Redux/Actions'
-import Picker from './Picker'
-import Posts from './Posts'
+import React, { Component, PropTypes } from "react"
+import { connect } from "react-redux"
+import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from "../../../Redux/Actions"
+import Picker from "./Picker"
+import Posts from "./Posts"
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -39,9 +39,10 @@ class AsyncApp extends Component {
     const { selectedSubreddit, posts, isFetching, lastUpdated } = this.props
     return (
       <div>
-        <Picker value={selectedSubreddit}
-                onChange={this.handleChange}
-                options={[ 'reactjs', 'frontend' ]} />
+        <Picker
+          value={selectedSubreddit}
+          onChange={this.handleChange}
+          options={["reactjs", "frontend"]} />
         <p>
           {lastUpdated &&
             <span>
