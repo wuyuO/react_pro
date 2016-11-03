@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: ['./src/main.js']
+		app: ['./src/main.jsx']
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -14,7 +14,7 @@ module.exports = {
 	devtool: 'eval-source-map',
 	module: {
 		preLoaders: [
-			// {test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/},
+			{test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/},
 			{test: /\.jsx$/, loader: "eslint-loader", exclude: /node_modules/}
 		],
 		loaders: [
