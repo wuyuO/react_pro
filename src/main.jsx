@@ -1,7 +1,8 @@
+import "babel-polyfill"
 import React from "react"
 import { render } from "react-dom"
-import Router from "./router"
+import Root from "./Root"
 
 render((
-  <Router />
+  <Root />
 ), document.getElementById("root"))
