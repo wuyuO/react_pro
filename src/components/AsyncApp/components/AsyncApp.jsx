@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from "react"
 import { connect } from "react-redux"
-import { asyncApp } from "../../../Redux/Actions"
+import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from "../../../Redux/Actions"
 import Picker from "./Picker"
 import Posts from "./Posts"
-
-const { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } = asyncApp
 
 class AsyncApp extends Component {
   constructor(props) {

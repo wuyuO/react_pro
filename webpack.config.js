@@ -25,7 +25,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-      new webpack.NoErrorsPlugin(),
+    new webpack.NoErrorsPlugin(),
 	  new HtmlWebpackPlugin({
 		  title: 'react_webpack',
 		  template: path.join(__dirname,'./src/index.html'),
@@ -35,10 +35,6 @@ module.exports = {
 	eslint: {
 		configFile: path.join(__dirname,'./.eslintrc')
 	},
-	babel: {
-        presets: ['es2015'],
-        plugins: ['transform-runtime']
-    },
 	resolve: {
 		extensions: ['','.js','.jsx','.scss','.css'],
 		alias: {

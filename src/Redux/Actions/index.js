@@ -1,1 +1,1 @@
-export * as asyncApp from './asyncApp'
+export * from "./asyncApp"
