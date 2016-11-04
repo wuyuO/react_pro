@@ -42,17 +42,20 @@ class AsyncApp extends Component {
         <Picker
           value={selectedSubreddit}
           onChange={this.handleChange}
-          options={["reactjs", "frontend"]} />
+          options={["reactjs", "frontend"]}
+        />
         <p>
           {lastUpdated &&
             <span>
               Last updated at {new Date(lastUpdated).toLocaleTimeString()}.
-              {' '}
+              {" "}
             </span>
           }
           {!isFetching &&
-            <a href='#'
-               onClick={this.handleRefreshClick}>
+            <a
+              href="##"
+              onClick={this.handleRefreshClick}
+            >
               Refresh
             </a>
           }
