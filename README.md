@@ -1,2 +1,2 @@
 # react_pro
-react + webpack project
+react + webpack + redux + react-router project
