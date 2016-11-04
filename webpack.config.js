@@ -20,7 +20,8 @@ module.exports = {
 		loaders: [
 			{ test: /\.jsx$/,loader: 'babel-loader', exclude: /node_modules/},
 			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-			{ test: /\.css$/, loader: "style!css" }
+			{ test: /\.css$/, loader: "style!css" },
+			{ test: /\.json$/, loader: "json-loader" }
 		]
 	},
 	plugins: [

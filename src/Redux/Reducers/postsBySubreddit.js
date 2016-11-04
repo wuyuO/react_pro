@@ -1,7 +1,7 @@
 import {
   INVALIDATE_SUBREDDIT,
   REQUEST_POSTS, RECEIVE_POSTS
-} from "../Actions"
+} from "../Types"
 
 const posts = (state = {
   isFetching: false,
