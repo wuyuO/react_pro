@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --hot --history-api-fallback --progress --colors --config ./build/webpack.dev.config.js",
     "build": "rm -rf dist && webpack --progress --colors --config ./build/webpack.pro.config.js",
+    "server": "npm run build && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zxh",
