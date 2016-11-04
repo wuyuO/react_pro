@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --history-api-fallback --progress --colors",
+    "build": "rm -rf dist && webpack --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zxh",
@@ -28,6 +29,7 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
+    "express": "^4.14.0",
     "html-webpack-plugin": "^2.24.0",
     "json-loader": "^0.5.4",
     "react-hot-loader": "^3.0.0-beta.6",
