@@ -1,13 +1,13 @@
 var webpack = require('webpack');
+var config = require('../config');
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
 		app: ['./src/main.jsx']
 	},
 	output: {
-		path: path.resolve(__dirname, "dist"),
+		path: config.assetsRoot,
 	    publicPath: "/",
 	    filename: "[name].js"
 	},
@@ -24,22 +24,14 @@ module.exports = {
 			{ test: /\.json$/, loader: "json-loader" }
 		]
 	},
-	plugins: [
-    new webpack.NoErrorsPlugin(),
-	  new HtmlWebpackPlugin({
-		  title: 'react_webpack',
-		  template: path.join(__dirname,'./src/index.html'),
-		  hash:false
-		}),
-  	],
 	eslint: {
-		configFile: path.join(__dirname,'./.eslintrc')
+		configFile: path.join(__dirname,'../.eslintrc')
 	},
 	resolve: {
 		extensions: ['','.js','.jsx','.scss','.css'],
 		alias: {
-            filter: path.join(__dirname, './src/filters'),
-            Components: path.join(__dirname, './src/components')
+            filter: path.join(__dirname, '../src/filters'),
+            Components: path.join(__dirname, '../src/components')
         },
 		modulesDirectories: [ "node_modules"]
 	}

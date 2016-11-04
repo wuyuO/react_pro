@@ -4,8 +4,8 @@
   "description": "this is my first react",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback --progress --colors",
-    "build": "rm -rf dist && webpack --colors",
+    "start": "webpack-dev-server --inline --hot --history-api-fallback --progress --colors --config ./build/webpack.dev.config.js",
+    "build": "rm -rf dist && webpack --progress --colors --config ./build/webpack.pro.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zxh",
@@ -35,7 +35,8 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.15.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
