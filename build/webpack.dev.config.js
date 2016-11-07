@@ -11,17 +11,16 @@ baseWebpackConfig.module.loaders.unshift({
   test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap' )
 })
 baseWebpackConfig.module.loaders.unshift({
-  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader','less-loader?sourceMap' )
+  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap','less-loader?sourceMap' )
 })
 
 module.exports = merge(baseWebpackConfig, {
 
-  devtool: '#eval-source-map',
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': config.dev.env
     }),
-    // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new ExtractTextPlugin('[hash:8].style.css', { allChunks: true }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -31,5 +30,15 @@ module.exports = merge(baseWebpackConfig, {
 		  template: config.htmlTemple,
 		  hash:false
 		}),
-  ]
+  ],
+  // devServer: {
+  //   quiet: false,
+  //   noInfo: false,
+  //   publicPath: '/',
+  //   proxy: {
+  //     '/web/public/api/*': {
+  //       target: 'http://8082.tuikor.com/'
+  //     }
+  //   }
+  // }
 })

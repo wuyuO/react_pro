@@ -20,8 +20,6 @@ module.exports = {
 		loaders: [
 			{ test: /\.jsx$/,loader: 'babel-loader', exclude: /node_modules/},
 			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-			// { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap' ) },
-			// { test: /\.less$/, loader: "style!css!less?sourceMap" },
 			{ test: /\.json$/, loader: "json-loader" },
 			{ test: /\.(jpe?g|png|gif)$/i, loaders: [
 					'url?limit=10000&name=images/[hash:8].[name].[ext]',
