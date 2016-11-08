@@ -4,6 +4,7 @@ import App from "./components/App"
 import Dashboard from "./components/Dashboard"
 import About from "./components/about"
 import AsyncApp from "./components/AsyncApp"
+import Product from "./components/product"
 
 const rootRoute = () => (
   <Router history={browserHistory} >
@@ -11,6 +12,7 @@ const rootRoute = () => (
       <IndexRoute component={Dashboard} />
       <Route path="about" getComponent={About} />
       <Route path="AsyncApp" getComponent={AsyncApp} />
+      <Route path="product" getComponent={Product} />
     </Route>
   </Router>
 )

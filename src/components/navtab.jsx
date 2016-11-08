@@ -18,6 +18,7 @@ const NavTab = () => (
       <li><IndexLink to="/" style={styles.Link} activeStyle={styles.activeLink}>home</IndexLink></li>
       <li><Link to="/about" style={styles.Link} activeStyle={styles.activeLink}>about</Link></li>
       <li><Link to="/AsyncApp" style={styles.Link} activeStyle={styles.activeLink}>AsyncApp</Link></li>
+      <li><Link to="/product" style={styles.Link} activeStyle={styles.activeLink}>product</Link></li>
     </ul>
   </div>
 )

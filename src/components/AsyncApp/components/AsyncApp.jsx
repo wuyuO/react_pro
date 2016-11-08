@@ -7,6 +7,7 @@ import Posts from "./Posts"
 class AsyncApp extends Component {
   constructor(props) {
     super(props)
+    // This binding is necessary to make `this` work in the callback
     this.handleChange = this.handleChange.bind(this)
     this.handleRefreshClick = this.handleRefreshClick.bind(this)
   }
