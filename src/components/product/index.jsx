@@ -1,5 +1,5 @@
 import React from "react"
-import Product from "./ProductTable"
+import ProductRow from "./components/FilterableProductTable"
 
 const products = [
   { category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football" },
@@ -10,10 +10,10 @@ const products = [
   { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" }
 ]
 
-const ProductTest = () => (
-  <div>
-    <Product products={products} filterText="" inStockOnly={false} />
-  </div>
-)
+const getComponent = (nextState, cb) => {
+  require.ensure([], () => {
+    cb(null, () => <ProductRow products={products} />)
+  })
+}
 
-export default ProductTest
+export default getComponent

@@ -1,23 +1,24 @@
 import React, { PropTypes } from "react"
 
-const productRow = props => {
-  // const { product } = props
-  const name = props.product.stocked ? props.product.name : <span style={{ color: "red" }}>{props.product.name}</span>
+const ProductRow = props => {
+  const { product } = props
+  const name = product.stocked ? product.name : <span style={{ color: "red" }}>{product.name}</span>
 
   return (
     <tr>
       <td>{name}</td>
-      <td>{props.product.price}</td>
+      <td>{product.price}</td>
     </tr>
   )
 }
 
-productRow.propTypes = {
+ProductRow.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     stocked: PropTypes.bool.isRequired
   }).isRequired
+  // products: PropTypes.object.isRequired
 }
 
-export default productRow
+export default ProductRow
