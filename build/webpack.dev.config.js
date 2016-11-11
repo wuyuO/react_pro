@@ -8,10 +8,10 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 //设置css sourceMap
 baseWebpackConfig.module.loaders.unshift({
-  test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap' )
+  test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&strictMath&noIeCompat' )
 })
 baseWebpackConfig.module.loaders.unshift({
-  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap','less-loader?sourceMap' )
+  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&strictMath&noIeCompat','less-loader?sourceMap&strictMath&noIeCompat' )
 })
 
 module.exports = merge(baseWebpackConfig, {

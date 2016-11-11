@@ -11,10 +11,10 @@ baseWebpackConfig.entry.vendor = ['react','redux','react-redux','react-router','
 
 //设置css sourceMap
 baseWebpackConfig.module.loaders.unshift({
-  test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader' )
+  test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&strictMath&noIeCompat' )
 })
 baseWebpackConfig.module.loaders.unshift({
-  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader','less-loader' )
+  test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&strictMath&noIeCompat','less-loader?sourceMap&strictMath&noIeCompat' )
 })
 
 module.exports = merge(baseWebpackConfig, {

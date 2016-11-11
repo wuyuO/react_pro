@@ -1,18 +1,14 @@
 import React from "react"
 import { Router, Route, browserHistory, IndexRoute } from "react-router"
-import App from "./components/App"
-import Dashboard from "./components/Dashboard"
-import About from "./components/about"
-import AsyncApp from "./components/AsyncApp"
-import Product from "./components/product"
+import App from "./components/app"
+import Chat from "./components/Chat"
+import Login from "./components/Login"
 
 const rootRoute = () => (
   <Router history={browserHistory} >
     <Route path="/" component={App}>
-      <IndexRoute component={Dashboard} />
-      <Route path="about" getComponent={About} />
-      <Route path="AsyncApp" getComponent={AsyncApp} />
-      <Route path="product" getComponent={Product} />
+      <IndexRoute getComponent={Chat} />
+      <Route path="/login" component={Login} />
     </Route>
   </Router>
 )
